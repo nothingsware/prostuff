@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <title>Brennen</title>
+</head>
+<body>
+    <header class="header home-header">
+        <a href="#" class="logo">Brennen</a>
+    </header>
+
+    <section class="home">
+        <div class="home-img">
+            <img src="images/main.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, I'm <span>Brennen</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>I am a dedicated programmer continually enhancing my skills and gaining valuable experience through collaboration with others. If you are looking to hire a committed and eager professional, I would be thrilled to work with you!</p>            
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-solid fa-crosshairs"></i></a>              
+            </div>
+        </div>
+    </section>
+
+    <header class="header services-header">
+        <h1>Services</h1>
+    </header>
+    <section class="services">
+        <div class="service">
+            <h2>Web Development</h2>
+            <p>Building responsive and modern websites.</p>
+        </div>
+        <div class="service">
+            <h2>Game Development</h2>
+            <p>Creating fun games on roblox studio and other various engines.</p>
+        </div>
+        <div class="service">
+            <h2>Languages</h2>
+            <p>The languages i’m proficient in is LUAU, HTML, CSS, JavaScript, and C++.</p>
+        </div>
+    </section>
+
+    <header class="header skills-header">
+        <h1>Past Work</h1>
+    </header>
+    <section class="skills">
+        <div class="skills-grid">
+            <div class="skill-item">
+                <img src="images/skill1.png" alt="Skill 1">
+                <div class="skill-info">
+                    <h2>HTML/CSS/JS/PHP</h2>
+                    <p>Creating modern, responsive bio link web designs.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <img src="images/skill2.png" alt="Skill 2">
+                <div class="skill-info">
+                    <h2>HTML/CSS/JavaScript</h2>
+                    <p>Developing a minimalstic and interactive web market.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <img src="images/skill3.png" alt="Skill 3">
+                <div class="skill-info">
+                    <h2>HTML/CSS/JS</h2>
+                    <p>Building a simple but clean, and modern bio link website.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <img src="images/skill4.png" alt="Skill 3">
+                <div class="skill-info">
+                    <h2>HTML/CSS</h2>
+                    <p>A simple market place to sell a product.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <header class="header contact-header">
+        <h1>Contact</h1>
+    </header>
+    <section class="contact">
+        <div class="contact-content">
+            <h2>Get in Touch!</h2>
+            <p>If you'd like to discuss a project or just want to say hi, feel free to contact me.</p>
+            <p>Discord: brennen_n</p>
+        </div>
+        <a href="https://discord.gg/solutions" class="btn">Hire me</a>
+    </section>
+
+    <script>
+        document.addEventListener('scroll', function() {
+            document.querySelectorAll('.header').forEach(header => {
+                const rect = header.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    header.classList.add('visible');
+                } else {
+                    header.classList.remove('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
