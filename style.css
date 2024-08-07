@@ -362,7 +362,7 @@ span {
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: conic-gradient(from var(--angle), transparent 65%, blue);
+    background-image: conic-gradient(from var(--angle), transparent 65%, rgb(170, 170, 174));
     border-radius: 1rem; 
     z-index: 1;
     transform: scale(1.1);
