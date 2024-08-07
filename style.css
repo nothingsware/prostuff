@@ -323,6 +323,7 @@ span {
     font-size: 1.4rem;
     text-align: center;
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -335,15 +336,51 @@ span {
 }
 
 .service {
-    background: url('images/R.gif') no-repeat center center;
-    background-size: cover;
-    padding: 2rem;
+    position: relative; /* Ensure pseudo-elements are positioned relative to .service */
+    padding: 1rem;
+    gap: 2rem;
     border-radius: 1rem;
     margin-bottom: 2rem;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
     animation: fadeIn 1s ease-out;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden; /* Ensure no overflow from pseudo-elements */
 }
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 65%, blue);
+    border-radius: 1rem; 
+    z-index: 1;
+    transform: scale(1.1);
+    animation: spin 3s linear infinite;
+    filter: blur(1.6rem);
+    opacity: 0.8;
+    pointer-events: none; 
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
 
 .contact-content {
     background-color: var(--dark-background-color);
@@ -355,7 +392,7 @@ span {
     animation: fadeIn 1s ease-out;
 }
 
-.service:hover, .contact-content:hover {
+.contact-content:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     transform: translateY(-5px);
 }
@@ -363,25 +400,24 @@ span {
 .service h2, .contact-content h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--highlight-color); 
+    color: var(--primary-color);
     transition: color 0.3s ease;
 }
 
 .service h2:hover, .contact-content h2:hover {
-    color: var(--accent-color); 
+    color: var(--secondary-color);
 }
 
 .service p, .contact-content p {
     font-size: 1.6rem;
     line-height: 1.5;
-    color: var(--text-color); 
+    color: var(--font-color);
     transition: color 0.3s ease;
 }
 
 .service p:hover, .contact-content p:hover {
-    color: var(--accent-color); 
+    color: var(--secondary-color);
 }
-
 
 @media(max-width: 1000px) {
     .home {
