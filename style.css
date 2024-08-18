@@ -324,6 +324,117 @@ span {
     font-size: 1.4rem;
     text-align: center;
 }
+.contact {
+    padding: 4rem 2rem;
+    background-color: var(--dark-background-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--font-color);
+}
+
+.contact:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--glow-color);
+}
+
+.contact h3 {
+    font-size: 2.4rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact p {
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-icons a {
+    font-size: 2.4rem;
+    color: var(--font-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1.2rem;
+    background-color: var(--background-color);
+    border-radius: 0.5rem;
+    color: var(--font-color);
+    border: 1px solid var(--secondary-color);
+    font-size: 1.6rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--glow-color);
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 150px;
+}
+
+.contact-form button {
+    padding: 1.2rem 2.4rem;
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    color: var(--background-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 1.5rem;
+}
+
+.contact-form button:hover {
+    background-color: var(--font-color);
+    color: var(--background-color);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .contact h3 {
+        font-size: 2rem;
+    }
+
+    .contact p {
+        font-size: 1.4rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1.4rem;
+    }
+
+    .contact-form button {
+        font-size: 1.4rem;
+    }
+}
 
 @keyframes fadeIn {
     from {
